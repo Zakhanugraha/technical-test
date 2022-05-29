@@ -5,17 +5,11 @@
 </div>
 
 <div>
-    <form>
+    <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
         <div>
-            <input type="email" id="email" placeholder="Email" name="email">
-        </div>
-    </form>
-</div>
-
-<div>
-    <form>
-        <div>
-            <input type="password" id="password" placeholder="Password" name="password">
+            <input type="email" id="email" placeholder="Email" name="email" formControlName="email">
+            <input type="password" id="password" placeholder="Password" name="password" formControlName="password">
+            <input type="submit" value="LOGIN">
         </div>
     </form>
 </div>
